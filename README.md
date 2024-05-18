@@ -50,16 +50,16 @@ log in MySQL -
 mysql -u root -p
 
 create the Database
-CREATE DATABASE otp_project;
-USE otp_project;
-CREATE TABLE otp_entries (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    email VARCHAR(255) NOT NULL,
-    otp VARCHAR(6) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    is_valid BOOLEAN DEFAULT TRUE,
-    is_verified BOOLEAN DEFAULT FALSE
-);
+    CREATE DATABASE otp_project;
+    USE otp_project;
+    CREATE TABLE otp_entries (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        email VARCHAR(255) NOT NULL,
+        otp VARCHAR(6) NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        is_valid BOOLEAN DEFAULT TRUE,
+        is_verified BOOLEAN DEFAULT FALSE
+    );
 
 # Usage
 Open your browser and navigate to http://localhost:3000.
