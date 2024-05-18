@@ -61,9 +61,9 @@ CREATE TABLE otp_entries (
     is_verified BOOLEAN DEFAULT FALSE
 );
 
-## Usage
+# Usage
 Open your browser and navigate to http://localhost:3000.
 Enter your email to receive an OTP.
 Check your email for the OTP.
-# Note - Email might appear in spam folder
+**Note - Email might appear in spam folder.**
 Enter the received OTP on the verification page.
