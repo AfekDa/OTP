@@ -51,7 +51,7 @@ app.post('/verify-otp', async (req, res) => {
       await db.promise().query(updateQuery, [results[0].id]);
       res.json({ message: 'OTP verified successfully' });
     } else {
-      res.status(400).json({ error: 'Invalid OTP or email' });
+      res.status(400).json({ error: 'Invalid code, Please try again' });
     }
   } catch (err) {
     console.error('Failed to verify OTP:', err);
