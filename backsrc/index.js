@@ -30,7 +30,7 @@ db.connect(err => {
 // Route to generate and send OTP
 app.get('/', async (req, res) => {
   try {
-    const userEmail = 'afekdavid666@gmail.com';
+    const userEmail = process.env.EMAIL;
     const otp = await generateOTP();
     console.log('OTP generated:', otp);
     await sendEmail(userEmail, otp);

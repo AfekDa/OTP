@@ -6,14 +6,14 @@ function sendEmail(to, otp, callback) {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'afekdavid666@gmail.com', // Replace with your email
+            user: process.env.EMAIL, // Replace with your email
             pass: process.env.PASS // Replace with your email password or app-specific password
         }
     });
 
     // Setup email data
     const mailOptions = {
-        from: '"OTP Service" <afekdavid666@gmail.com>', // sender address
+        from: `"OTP Service" <${process.env.EMAIL}>`, // sender address
         to: to, // list of receivers
         subject: 'Your OTP', // Subject line
         text: 'Here is your One-Time Password: ' + otp, // plaintext body
